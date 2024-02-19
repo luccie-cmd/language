@@ -1,0 +1,18 @@
+// %include "./libc.lang"
+
+extern func puts(String fmt);
+
+func main(){
+    puts("Hello, World!\n");
+    return 0;
+}
+
+// Decl_Function: extern puts
+// Decl_Function: main
+// |- Compound
+//    |- Call
+//    |  |- Name: puts
+//    |  |- Operands
+//    |     |- LitString: i8* "Hello, World!\n"
+//    |- Return
+//       |- LitInt: int 0
